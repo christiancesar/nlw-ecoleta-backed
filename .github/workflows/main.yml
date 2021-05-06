@@ -4,7 +4,6 @@ on:
 
   push:
     branches: [ master ]
-  workflow_dispatch:
 
 jobs:
 
@@ -47,4 +46,10 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{secrets.SSH_KEY}}
           source: ".,!node_modules"
-          target: "~/app/ecoleta-backend/" 
+          target: "~/app/ecoleta-backend/"
+          script: |
+            cd ~/app/ecoleta-backend/,
+            yarn,
+            yarn knex:seed,
+            yarn knex:migrate,
+            pm2 restart ecoleta-api, 
