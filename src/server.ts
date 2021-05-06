@@ -12,4 +12,6 @@ app.use(routes);
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
 
-app.listen(process.env.APP_API_PORT || 3332);
+app.listen(3332,() => {
+  console.log('🚀 Ecoleta started on port 3332!');
+});
