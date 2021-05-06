@@ -47,6 +47,6 @@ jobs:
           script: |
             cd ~/app/ecoleta-backend/,
             yarn,
-            yarn knex:seed,
             yarn knex:migrate,
+            yarn knex:seed,            
             pm2 restart ecoleta-api. 
