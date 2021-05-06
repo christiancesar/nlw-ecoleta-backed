@@ -49,4 +49,4 @@ jobs:
             yarn,
             yarn knex:seed,
             yarn knex:migrate,
-            pm2 restart ecoleta-api, 
+            pm2 restart ecoleta-api. 
