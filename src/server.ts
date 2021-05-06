@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express';
 import routes from './routes';
 import path from 'path';
@@ -11,4 +12,4 @@ app.use(routes);
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
 
-app.listen(3333);
+app.listen(process.env.APP_API_URL);
