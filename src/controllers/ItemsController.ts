@@ -9,7 +9,7 @@ class ItemsController {
             return {
                 id: item.id,
                 name: item.title,
-                image_url: `${process.env.BASE_URL}:${process.env.PORT}/uploads/${item.image}`,
+                image_url: `${process.env.BASE_URL}/uploads/${item.image}`,
                 
             };                      
         });
