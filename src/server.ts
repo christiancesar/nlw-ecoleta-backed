@@ -12,4 +12,4 @@ app.use(routes);
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
 
-app.listen(process.env.APP_API_URL);
+app.listen(process.env.APP_API_PORT || 3332);

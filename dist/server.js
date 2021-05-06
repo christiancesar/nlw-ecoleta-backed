@@ -17,4 +17,4 @@ app.use((0, _cors.default)());
 app.use(_express.default.json());
 app.use(_routes.default);
 app.use('/uploads', _express.default.static(_path.default.resolve(__dirname, '..', 'uploads')));
-app.listen(process.env.APP_API_URL);
+app.listen(process.env.APP_API_PORT || 3332);
